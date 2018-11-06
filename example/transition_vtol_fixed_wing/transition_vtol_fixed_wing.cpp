@@ -53,7 +53,6 @@ int main(int /* argc */, char** /* argv */)
     // Arm vehicle
     std::cout << "Arming." << std::endl;
     const ActionResult arm_result = action->arm();
-
     if (arm_result != ActionResult::SUCCESS) {
         std::cout << "Arming failed: " << action_result_str(arm_result) << std::endl;
         return 1;
@@ -72,7 +71,6 @@ int main(int /* argc */, char** /* argv */)
 
     std::cout << "Transition to fixedwing." << std::endl;
     const ActionResult fw_result = action->transition_to_fixedwing();
-
     if (fw_result != ActionResult::SUCCESS) {
         std::cout << "Transition to fixed wing failed: " << action_result_str(fw_result) << std::endl;
         return 1;
