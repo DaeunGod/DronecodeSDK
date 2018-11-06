@@ -1,15 +1,13 @@
 #include <chrono>
-#include <cstdint>
+#include <cmath>
 #include <iostream>
 #include <thread>
-#include <cmath>
 #include <dronecode_sdk/action.h>
 #include <dronecode_sdk/dronecode_sdk.h>
 #include <dronecode_sdk/telemetry.h>
 
 using std::this_thread::sleep_for;
 using std::chrono::seconds;
-using std::chrono::milliseconds;
 
 using namespace dronecode_sdk;
 
