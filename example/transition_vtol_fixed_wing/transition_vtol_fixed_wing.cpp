@@ -93,7 +93,7 @@ int main(int /* argc */, char** /* argv */)
     }
 
     // Let it fly South for a bit.
-    sleep_for(seconds(20));
+    sleep_for(seconds(15));
 
     // Let's stop before reaching the goto point and go back to hover.
     std::cout << "Transition back to multicopter..." << std::endl;
