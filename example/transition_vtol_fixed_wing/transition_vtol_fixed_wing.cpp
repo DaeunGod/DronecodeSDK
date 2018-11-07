@@ -18,7 +18,8 @@ int main(int /* argc */, char** /* argv */)
     const ConnectionResult connection_result = dc.add_udp_connection(14540);
 
     if (connection_result != ConnectionResult::SUCCESS) {
-        std::cout << "Connection failed: " << connection_result_str(connection_result) << std::endl;
+        std::cout << "Connection failed: "
+                  << connection_result_str(connection_result) << std::endl;
         return 1;
     }
 
