@@ -1,15 +1,9 @@
-#include <chrono>
-#include <cmath>
-#include <iostream>
-#include <thread>
 #include <dronecode_sdk/action.h>
 #include <dronecode_sdk/dronecode_sdk.h>
 #include <dronecode_sdk/telemetry.h>
 
-using std::this_thread::sleep_for;
-using std::chrono::seconds;
-
 using namespace dronecode_sdk;
+
 
 int main(int /* argc */, char** /* argv */)
 {
