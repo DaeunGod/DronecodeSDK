@@ -15,13 +15,8 @@ int main(int /* argc */, char** /* argv */)
 {
     DronecodeSDK dc;
 
-    const ConnectionResult connection_result = dc.add_udp_connection(14540);
+    dc.add_udp_connection(14540);
 
-    if (connection_result != ConnectionResult::SUCCESS) {
-        std::cout << "Connection failed: "
-                  << connection_result_str(connection_result) << std::endl;
-        return 1;
-    }
 
     while (!dc.system().has_autopilot()) {
         sleep_for(seconds(1));
