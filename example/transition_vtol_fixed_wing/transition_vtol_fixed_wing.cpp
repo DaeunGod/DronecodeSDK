@@ -36,12 +36,10 @@ int main(int /* argc */, char** /* argv */)
 
     action->takeoff();
 
-    // Wait while it takes off.
     sleep_for(seconds(10));
 
     action->transition_to_fixedwing();
 
-    // Let it transition and start loitering.
     sleep_for(seconds(30));
 
     action->goto_location(47.3633001, 8.5428515, NAN, NAN);
