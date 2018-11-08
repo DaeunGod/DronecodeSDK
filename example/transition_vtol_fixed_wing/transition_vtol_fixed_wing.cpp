@@ -27,6 +27,7 @@ int main(int /* argc */, char** /* argv */)
         return 1;
     }
 
+    action->arm();
     action->takeoff();
     sleep_for(seconds(10));
     action->transition_to_fixedwing();
