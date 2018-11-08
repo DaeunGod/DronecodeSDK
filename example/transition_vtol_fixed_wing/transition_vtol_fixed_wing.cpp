@@ -28,21 +28,13 @@ int main(int /* argc */, char** /* argv */)
     }
 
     action->takeoff();
-
     sleep_for(seconds(10));
-
     action->transition_to_fixedwing();
-
     sleep_for(seconds(30));
-
     action->goto_location(47.3633001, 8.5428515, NAN, NAN);
-
     sleep_for(seconds(15));
-
     action->transition_to_multicopter();
-
     sleep_for(seconds(5));
-
     action->land();
 
     // Wait until disarmed.
