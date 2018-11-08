@@ -19,7 +19,6 @@ int main(int /* argc */, char** /* argv */)
 
     System &system = dc.system();
 
-    auto telemetry = std::make_shared<Telemetry>(system);
     auto action = std::make_shared<Action>(system);
 
     while (!telemetry->health_all_ok()) {
@@ -44,12 +43,10 @@ int main(int /* argc */, char** /* argv */)
 
     action->goto_location(47.3633001, 8.5428515, NAN, NAN);
 
-    // Let it fly South for a bit.
     sleep_for(seconds(15));
 
     action->transition_to_multicopter();
 
-    // Wait for the transition to be carried out.
     sleep_for(seconds(5));
 
     action->land();
