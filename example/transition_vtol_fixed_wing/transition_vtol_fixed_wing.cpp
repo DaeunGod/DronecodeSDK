@@ -11,12 +11,6 @@ int main(int /* argc */, char** /* argv */)
 
     dc.add_udp_connection(14540);
 
-
-    while (!dc.system().has_autopilot()) {
-        sleep_for(seconds(1));
-        std::cout << "Waiting for system to connect." << std::endl;
-    }
-
     System &system = dc.system();
 
     auto action = std::make_shared<Action>(system);
